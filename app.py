@@ -9,7 +9,7 @@ st.set_page_config(
     layout="wide"
 )
 
-# Custom Styling function using pure Streamlit components
+# Custom Styling function using pure Streamlit components (Safe for Python 3.14)
 def section_header(text):
     st.markdown(f"### {text}")
     st.divider()
@@ -68,16 +68,23 @@ with tab2:
         st.subheader("Brigade Logistics Digitalization Project")
         st.caption("Lead Operations & Dashboard Developer | Sep 2024 - Jan 2025")
         st.markdown("""
-        * **Real-Time Synchronization:** Architected a multidimensional command dashboard for 5+ mission-critical supply streams (Fuel, Rations, Ordnance), achieving 100% real-time synchronization and reducing manual tracking errors by 40%.
+        * **Real-Time Synchronization:** Architected a multidimensional Excel-based command dashboard for 5+ mission-critical supply streams (Fuel, Rations, Ordnance), achieving 100% real-time synchronization and reducing manual tracking errors by 40%.
         * **Framework Integration:** Integrated automated data-validation frameworks to enhance stock replenishment accuracy by 25% and optimize audit readiness for brigade assets.
         * **Standard Operating Procedures:** Authored a comprehensive SOP manual for digital dashboard operations, accelerating team onboarding speed by 50% and ensuring 100% workflow continuity.
         """)
 
-    section_header("Professional Experience")
+    section_header("Work Experience")
     
     # Lahan Hotel
     with st.expander("🏨 Lahan Hotel — Operations Support Specialist (Mar 2026 - Present)", expanded=True):
         st.markdown("""
         * Improved guest satisfaction scores by 15% by streamlining front-desk workflows and coordinating with hotel staff to reduce service delays during peak hours.
-        * Reduced quarterly supply waste by 10% through data-driven inventory tracking, documentation management, and operational process improvements.
+        * Reduced quarterly supply waste by 10% through inventory tracking, documentation management, and operational process improvements.
         * Supported daily hotel operations by resolving room readiness issues and coordinating across teams to maintain efficient guest service.
+        """)
+
+    # Operations & Administrative Specialist
+    with st.expander("📊 Operations & Administrative Specialist (Sep 2024 - Jan 2025)", expanded=True):
+        st.markdown("""
+        * **Increased administrative efficiency by 60%** by digitizing manual workflows and improving operational documentation processes.
+        * **
