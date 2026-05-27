@@ -16,7 +16,6 @@ def section_header(text):
 
 # ----------------- SIDEBAR -----------------
 with st.sidebar:
-    # Sidebar Profile Info (No HTML alternative for centering)
     st.image("https://via.placeholder.com/150", caption="Jiwon Ha", use_container_width=True)
     
     st.title("Jiwon Ha")
@@ -148,5 +147,6 @@ with tab3:
         title="Skill Radar Chart Map",
         template="plotly_dark"
     )
-    fig2.update_traces(fill='adjacent')
+    # 최신 버전에 호환되는 'toself' 옵션으로 변경 완료
+    fig2.update_traces(fill='toself')
     st.plotly_chart(fig2, use_container_width=True)
