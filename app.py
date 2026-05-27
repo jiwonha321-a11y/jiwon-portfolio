@@ -9,30 +9,28 @@ st.set_page_config(
     layout="wide"
 )
 
-# Custom Styling function (Safe for Python 3.14)
+# Custom Styling function using pure Streamlit components
 def section_header(text):
     st.markdown(f"### {text}")
-    st.markdown("---")
+    st.divider()
 
 # ----------------- SIDEBAR -----------------
 with st.sidebar:
-    st.markdown('<div style="text-align: center;">', unsafe_allowed_html=True)
-    st.image("https://via.placeholder.com/150", caption="Jiwon Ha")
-    st.markdown('</div>', unsafe_allowed_html=True)
+    # Sidebar Profile Info (No HTML alternative for centering)
+    st.image("https://via.placeholder.com/150", caption="Jiwon Ha", use_container_width=True)
     
     st.title("Jiwon Ha")
     st.write("📍 Toronto, ON")
     st.write("✉️ [jiwonj.ha@mail.utoronto.ca](mailto:jiwonj.ha@mail.utoronto.ca)")
     st.write("🔗 [LinkedIn](https://linkedin.com/in/jiwonhaaa)")
     
-    st.markdown("---")
+    st.divider()
     st.subheader("🛠️ Technical Core")
     st.code("Python (Pandas / NumPy)\nData Analysis\nOperational Reporting\nExcel Dashboarding\nSOP Development\nCompliance Auditing", language="text")
 
 # ----------------- MAIN CONTENT -----------------
 st.title("Jiwon Ha")
 st.subheader("Data-Driven Operations Specialist & Python Developer")
-st.markdown("<br>", unsafe_allowed_html=True)
 
 # Tabs Definition
 tab1, tab2, tab3 = st.tabs(["👋 About Me & Skills", "💻 Experience & Projects", "📊 Interactive Skill Dashboard"])
@@ -135,7 +133,7 @@ with tab3:
     st.plotly_chart(fig1, use_container_width=True)
     
     # Chart 2: Skill Radar Chart Map
-    st.markdown("---")
+    st.divider()
     st.subheader("Core Technical Proficiency Profile")
     
     skills = ["Python (Pandas/NumPy)", "Data Analysis", "Excel Dashboarding", "SOP & Documentation", "Compliance Auditing"]
