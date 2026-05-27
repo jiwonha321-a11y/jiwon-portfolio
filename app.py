@@ -9,7 +9,7 @@ st.set_page_config(
     layout="wide"
 )
 
-# Custom Styling function using pure Streamlit components (Safe for Python 3.14)
+# Custom Styling function using pure Streamlit components
 def section_header(text):
     st.markdown(f"### {text}")
     st.divider()
@@ -17,12 +17,10 @@ def section_header(text):
 # ----------------- SIDEBAR -----------------
 with st.sidebar:
     st.image("https://via.placeholder.com/150", caption="Jiwon Ha", use_container_width=True)
-    
     st.title("Jiwon Ha")
     st.write("📍 Toronto, ON")
     st.write("✉️ [jiwonj.ha@mail.utoronto.ca](mailto:jiwonj.ha@mail.utoronto.ca)")
     st.write("🔗 [LinkedIn](https://linkedin.com/in/jiwonhaaa)")
-    
     st.divider()
     st.subheader("🛠️ Technical Core")
     st.code("Python (Pandas / NumPy)\nData Analysis\nOperational Reporting\nExcel Dashboarding\nSOP Development\nCompliance Auditing", language="text")
@@ -37,29 +35,17 @@ tab1, tab2, tab3 = st.tabs(["👋 About Me & Skills", "💻 Experience & Project
 # --- TAB 1: ABOUT ME & SKILLS ---
 with tab1:
     section_header("Professional Summary")
-    st.markdown("""
-    An operations and data analysis specialist with a robust academic foundation in **Computational Cognition, Psychology, and Statistics** from the **University of Toronto**. 
-    Proven track record of optimizing workflows, reducing administrative errors, and architecting data-driven dashboards in high-stakes environments, including the military and hospitality sectors. 
-    Characterized by a meticulous, deliberate, and detail-oriented approach to building robust Python scripts and automated data workflows to drive organizational efficiency.
-    """)
+    st.markdown("An operations and data analysis specialist with a robust academic foundation in **Computational Cognition, Psychology, and Statistics** from the **University of Toronto**. Proven track record of optimizing workflows, reducing administrative errors, and architecting data-driven dashboards in high-stakes environments, including the military and hospitality sectors. Characterized by a meticulous, deliberate, and detail-oriented approach to building robust Python scripts and automated data workflows to drive organizational efficiency.")
     
     section_header("Education")
-    st.markdown("""
-    **University of Toronto, St. George** *Honours Bachelor of Science in Computational Cognition, Psychology and Statistics*
-    """)
+    st.markdown("**University of Toronto, St. George** \n*Honours Bachelor of Science in Computational Cognition, Psychology and Statistics*")
     
     section_header("Areas of Expertise")
     col1, col2 = st.columns(2)
     with col1:
-        st.markdown("""
-        * **Data & Analytics:** Python (Pandas/NumPy), Advanced Excel, Data Analysis, Operational Reporting
-        * **Operations Management:** Process Improvement, Workflow Documentation, SOP Development
-        """)
+        st.markdown("* **Data & Analytics:** Python (Pandas/NumPy), Advanced Excel, Data Analysis, Operational Reporting\n* **Operations Management:** Process Improvement, Workflow Documentation, SOP Development")
     with col2:
-        st.markdown("""
-        * **Risk & Quality Control:** Compliance Auditing, Records Management, Inventory Tracking
-        * **Leadership:** Stakeholder Communication, Multi-disciplinary Team Coordination
-        """)
+        st.markdown("* **Risk & Quality Control:** Compliance Auditing, Records Management, Inventory Tracking\n* **Leadership:** Stakeholder Communication, Multi-disciplinary Team Coordination")
 
 # --- TAB 2: EXPERIENCE & PROJECTS ---
 with tab2:
@@ -67,24 +53,18 @@ with tab2:
     with st.container():
         st.subheader("Brigade Logistics Digitalization Project")
         st.caption("Lead Operations & Dashboard Developer | Sep 2024 - Jan 2025")
-        st.markdown("""
-        * **Real-Time Synchronization:** Architected a multidimensional Excel-based command dashboard for 5+ mission-critical supply streams (Fuel, Rations, Ordnance), achieving 100% real-time synchronization and reducing manual tracking errors by 40%.
-        * **Framework Integration:** Integrated automated data-validation frameworks to enhance stock replenishment accuracy by 25% and optimize audit readiness for brigade assets.
-        * **Standard Operating Procedures:** Authored a comprehensive SOP manual for digital dashboard operations, accelerating team onboarding speed by 50% and ensuring 100% workflow continuity.
-        """)
+        st.markdown("* **Real-Time Synchronization:** Architected a multidimensional Excel-based command dashboard for 5+ mission-critical supply streams (Fuel, Rations, Ordnance), achieving 100% real-time synchronization and reducing manual tracking errors by 40%.\n* **Framework Integration:** Integrated automated data-validation frameworks to enhance stock replenishment accuracy by 25% and optimize audit readiness for brigade assets.\n* **Standard Operating Procedures:** Authored a comprehensive SOP manual for digital dashboard operations, accelerating team onboarding speed by 50% and ensuring 100% workflow continuity.")
 
     section_header("Work Experience")
     
-    # Lahan Hotel
     with st.expander("🏨 Lahan Hotel — Operations Support Specialist (Mar 2026 - Present)", expanded=True):
-        st.markdown("""
-        * Improved guest satisfaction scores by 15% by streamlining front-desk workflows and coordinating with hotel staff to reduce service delays during peak hours.
-        * Reduced quarterly supply waste by 10% through inventory tracking, documentation management, and operational process improvements.
-        * Supported daily hotel operations by resolving room readiness issues and coordinating across teams to maintain efficient guest service.
-        """)
+        st.markdown("* Improved guest satisfaction scores by 15% by streamlining front-desk workflows and coordinating with hotel staff to reduce service delays during peak hours.\n* Reduced quarterly supply waste by 10% through data-driven inventory tracking, documentation management, and operational process improvements.\n* Supported daily hotel operations by resolving room readiness issues and coordinating across teams to maintain efficient guest service.")
 
-    # Operations & Administrative Specialist
     with st.expander("📊 Operations & Administrative Specialist (Sep 2024 - Jan 2025)", expanded=True):
-        st.markdown("""
-        * **Increased administrative efficiency by 60%** by digitizing manual workflows and improving operational documentation processes.
-        * **
+        st.markdown("* **Increased administrative efficiency by 60%** by digitizing manual workflows and improving operational documentation processes.\n* **Improved leadership response times by 35%** through rigorous operational reporting, data analysis, and the preparation of concise administrative summaries.\n* **Managed a secure archive of 3,500+ records** while maintaining a 100% audit pass rate through accurate documentation and compliance tracking.")
+        
+    with st.expander("🪖 Republic of Korea Army — HR Operations Specialist (Sep 2024 - Mar 2026)"):
+        st.markdown("* Maintained 100% accuracy across 150+ personnel records by performing meticulous records management, compliance audits, and data verification procedures.\n* Reduced administrative processing errors by supporting payroll audits, reviewing operational data, and improving documentation accuracy.\n* Conducted quarterly audits of 1,200+ confidential personnel files, achieving a 98% compliance accuracy rate while strictly meeting military privacy standards.")
+
+    with st.expander("🚛 Republic of Korea Army — Logistics Support Specialist (Jan 2025 - Jun 2025)"):
+        st.markdown("* Coordinated logistics support for a 30-person ROK/U.S. joint force, achieving 100% on-time material delivery during large-scale training exercises.\n* Reduced operational downtime by 30% through strict inventory tracking, asset monitoring, and real-time logistics coordination
