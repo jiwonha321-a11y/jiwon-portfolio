@@ -57,19 +57,19 @@ with tab2:
 
     section_header("Work Experience")
     
-    # 1. 라한 호텔 (최상단)
+    # 1. Lahan Hotel
     with st.expander("🏨 Lahan Hotel — Operations Support Specialist (Mar 2026 - Present)", expanded=True):
         st.markdown("* Improved guest satisfaction scores by 15% by streamlining front-desk workflows and coordinating with hotel staff to reduce service delays.\n* Reduced quarterly supply waste by 10% through data-driven inventory tracking and documentation management.\n* Supported daily hotel operations by resolving room readiness issues and coordinating across teams.")
 
-    # 2. 대한민국 육군 인사 (중간 1)
+    # 2. Republic of Korea Army - HR
     with st.expander("🪖 Republic of Korea Army — HR Operations Specialist (Sep 2024 - Mar 2026)"):
         st.markdown("* Maintained 100% accuracy across 150+ personnel records by performing meticulous records management and data verification.\n* Reduced administrative processing errors by supporting payroll audits and improving documentation accuracy.\n* Conducted quarterly audits of 1,200+ confidential personnel files, achieving a 98% compliance accuracy rate.")
 
-    # 3. 대한민국 육군 군수 (중간 2)
+    # 3. Republic of Korea Army - Logistics
     with st.expander("🚛 Republic of Korea Army — Logistics Support Specialist (Jan 2025 - Jun 2025)"):
         st.markdown("* Coordinated logistics support for a 30-person ROK/U.S. joint force, achieving 100% on-time material delivery during exercises.\n* Reduced operational downtime by 30% through strict inventory tracking, asset monitoring, and real-time coordination.")
 
-    # 4. 운영 및 행정 전문가 (Work Experience 최하단)
+    # 4. Operations & Administrative Specialist
     with st.expander("📊 Operations & Administrative Specialist (Sep 2024 - Jan 2025)", expanded=True):
         st.markdown("* **Increased administrative efficiency by 60%** by digitizing manual workflows and improving operational documentation processes.\n* **Improved leadership response times by 35%** through rigorous operational reporting, data analysis, and summaries.\n* **Managed a secure archive of 3,500+ records** while maintaining a 100% audit pass rate through accurate documentation and compliance tracking.")
 
