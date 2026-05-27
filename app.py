@@ -27,14 +27,14 @@ with st.sidebar:
 
 # ----------------- MAIN CONTENT -----------------
 st.title("Jiwon Ha")
-st.subheader("Data-Driven Operations Specialist & Python Developer")
+st.subheader("Data-Driven Operations Specialist")
 
 # Tabs Definition
 tab1, tab2, tab3 = st.tabs(["👋 About Me & Skills", "💻 Experience & Projects", "📊 Interactive Skill Dashboard"])
 
 # --- TAB 1: ABOUT ME & SKILLS ---
 with tab1:
-    section_header("About")
+    section_header("About me")
     st.markdown("An operations and data analysis specialist with a robust academic foundation in **Computational Cognition, Psychology, and Statistics** from the **University of Toronto**. Proven track record of optimizing workflows, reducing administrative errors, and architecting data-driven dashboards in high-stakes environments. Characterized by a meticulous, deliberate, and detail-oriented approach to building robust Python scripts and automated data workflows to drive organizational efficiency.")
     
     section_header("Education")
