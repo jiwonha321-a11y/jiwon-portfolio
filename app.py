@@ -67,4 +67,48 @@ with tab2:
         st.markdown("* Maintained 100% accuracy across 150+ personnel records by performing meticulous records management, compliance audits, and data verification procedures.\n* Reduced administrative processing errors by supporting payroll audits, reviewing operational data, and improving documentation accuracy.\n* Conducted quarterly audits of 1,200+ confidential personnel files, achieving a 98% compliance accuracy rate while strictly meeting military privacy standards.")
 
     with st.expander("🚛 Republic of Korea Army — Logistics Support Specialist (Jan 2025 - Jun 2025)"):
-        st.markdown("* Coordinated logistics support for a 30-person ROK/U.S. joint force, achieving 100% on-time material delivery during large-scale training exercises.\n* Reduced operational downtime by 30% through strict inventory tracking, asset monitoring, and real-time logistics coordination
+        # 잘렸던 따옴표와 괄호 끝부분을 안전하게 완전히 닫았습니다.
+        st.markdown("* Coordinated logistics support for a 30-person ROK/U.S. joint force, achieving 100% on-time material delivery during large-scale training exercises.\n* Reduced operational downtime by 30% through strict inventory tracking, asset monitoring, and real-time logistics coordination.")
+
+    section_header("Leadership Experience")
+    
+    with st.expander("🎓 University of Toronto Student Union — Recognized Study Group Leader (Sep 2021 - Aug 2024)"):
+        st.markdown("* **Increased group academic performance by 30%** by organizing weekly study sessions, structured peer feedback activities, and collaborative learning initiatives.")
+
+# --- TAB 3: INTERACTIVE SKILL DASHBOARD ---
+with tab3:
+    section_header("Data Visualizations: Competency & Impact")
+    st.write("This interactive section demonstrates Python (Pandas & Plotly) utilization directly in the browser to visualize operational impacts.")
+    
+    st.subheader("Operational Efficiency Improvement Metrics (%)")
+    impact_data = pd.DataFrame({
+        "Metric / Project Area": [
+            "Administrative Efficiency ↑ (Ops Specialist)", 
+            "Academic Group Performance ↑ (U of T)",
+            "Leadership Response Times ↑ (Ops Specialist)", 
+            "Logistics Downtime Reduction ↓ (ROK Army)", 
+            "Dashboard Tracking Errors ↓ (Project)",
+            "Procurement Turnaround Times ↑ (ROK Army)",
+            "Guest Satisfaction Scores ↑ (Lahan Hotel)"
+        ],
+        "Improvement Percentage (%)": [60, 30, 35, 30, 40, 20, 15],
+        "Category": ["Admin & Ops", "Education", "Admin & Ops", "Logistics", "Project", "Logistics", "Hospitality"]
+    })
+    
+    fig1 = px.bar(
+        impact_data, 
+        x="Improvement Percentage (%)", 
+        y="Metric / Project Area", 
+        color="Category",
+        orientation='h',
+        title="Quantifiable Contributions Across Roles",
+        color_discrete_sequence=px.colors.qualitative.Pastel
+    )
+    fig1.update_layout(yaxis={'categoryorder':'total ascending'})
+    st.plotly_chart(fig1, use_container_width=True)
+    
+    st.divider()
+    st.subheader("Core Technical Proficiency Profile")
+    
+    skills = ["Python (Pandas/NumPy)", "Data Analysis", "Excel Dashboarding", "SOP & Documentation", "Compliance Auditing"]
+    levels = [85, 90, 95, 90, 95]
