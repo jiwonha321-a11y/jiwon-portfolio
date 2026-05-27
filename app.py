@@ -9,20 +9,14 @@ st.set_page_config(
     layout="wide"
 )
 
-# Custom CSS for Professional Look
-st.markdown("""
-    <style>
-    .main-title { font-size: 42px; font-weight: bold; color: #1E3A8A; margin-bottom: 5px; }
-    .subtitle { font-size: 20px; color: #4B5563; margin-bottom: 25px; }
-    .section-header { font-size: 24px; font-weight: bold; color: #1E3A8A; border-bottom: 2px solid #E5E7EB; padding-bottom: 8px; margin-top: 20px; }
-    .highlight-box { background-color: #F3F4F6; padding: 15px; border-radius: 8px; border-left: 5px solid #3B82F6; margin-bottom: 15px; }
-    </style>
-""", unsafe_allowed_html=True)
+# Custom Styling function (Safe for Python 3.14)
+def section_header(text):
+    st.markdown(f"### {text}")
+    st.markdown("---")
 
 # ----------------- SIDEBAR -----------------
 with st.sidebar:
     st.markdown('<div style="text-align: center;">', unsafe_allowed_html=True)
-    # Placeholder for profile picture - you can replace this URL with your own image link
     st.image("https://via.placeholder.com/150", caption="Jiwon Ha")
     st.markdown('</div>', unsafe_allowed_html=True)
     
@@ -36,27 +30,28 @@ with st.sidebar:
     st.code("Python (Pandas / NumPy)\nData Analysis\nOperational Reporting\nExcel Dashboarding\nSOP Development\nCompliance Auditing", language="text")
 
 # ----------------- MAIN CONTENT -----------------
-st.markdown('<p class="main-title">Jiwon Ha</p>', unsafe_allowed_html=True)
-st.markdown('<p class="subtitle">Data-Driven Operations Specialist & Python Developer</p>', unsafe_allowed_html=True)
+st.title("Jiwon Ha")
+st.subheader("Data-Driven Operations Specialist & Python Developer")
+st.markdown("<br>", unsafe_allowed_html=True)
 
 # Tabs Definition
 tab1, tab2, tab3 = st.tabs(["👋 About Me & Skills", "💻 Experience & Projects", "📊 Interactive Skill Dashboard"])
 
 # --- TAB 1: ABOUT ME & SKILLS ---
 with tab1:
-    st.markdown('<p class="section-header">Professional Summary</p>', unsafe_allowed_html=True)
+    section_header("Professional Summary")
     st.markdown("""
     An operations and data analysis specialist with a robust academic foundation in **Computational Cognition, Psychology, and Statistics** from the **University of Toronto**. 
     Proven track record of optimizing workflows, reducing administrative errors, and architecting data-driven dashboards in high-stakes environments, including the military and hospitality sectors. 
     Characterized by a meticulous, deliberate, and detail-oriented approach to building robust Python scripts and automated data workflows to drive organizational efficiency.
     """)
     
-    st.markdown('<p class="section-header">Education</p>', unsafe_allowed_html=True)
+    section_header("Education")
     st.markdown("""
     **University of Toronto, St. George** *Honours Bachelor of Science in Computational Cognition, Psychology and Statistics*
     """)
     
-    st.markdown('<p class="section-header">Areas of Expertise</p>', unsafe_allowed_html=True)
+    section_header("Areas of Expertise")
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("""
@@ -71,7 +66,7 @@ with tab1:
 
 # --- TAB 2: EXPERIENCE & PROJECTS ---
 with tab2:
-    st.markdown('<p class="section-header">Featured Project</p>', unsafe_allowed_html=True)
+    section_header("Featured Project")
     with st.container():
         st.subheader("Brigade Logistics Digitalization Project")
         st.caption("Lead Operations & Dashboard Developer | Sep 2024 - Jan 2025")
@@ -81,7 +76,7 @@ with tab2:
         * **Standard Operating Procedures:** Authored a comprehensive SOP manual for digital dashboard operations, accelerating team onboarding speed by 50% and ensuring 100% workflow continuity.
         """)
 
-    st.markdown('<p class="section-header">Professional Experience</p>', unsafe_allowed_html=True)
+    section_header("Professional Experience")
     
     # Lahan Hotel
     with st.expander("🏨 Lahan Hotel — Operations Support Specialist (Mar 2026 - Present)", expanded=True):
@@ -109,7 +104,7 @@ with tab2:
 
 # --- TAB 3: INTERACTIVE SKILL DASHBOARD ---
 with tab3:
-    st.markdown('<p class="section-header">Data Visualizations: Competency & Impact</p>', unsafe_allowed_html=True)
+    section_header("Data Visualizations: Competency & Impact")
     st.write("This interactive section demonstrates Python (Pandas & Plotly) utilization directly in the browser to visualize operational impacts.")
     
     # Chart 1: Key Achievements Impact
@@ -139,7 +134,7 @@ with tab3:
     fig1.update_layout(yaxis={'categoryorder':'total ascending'})
     st.plotly_chart(fig1, use_container_width=True)
     
-    # Interactive Skill Proficiency Sliders
+    # Chart 2: Skill Radar Chart Map
     st.markdown("---")
     st.subheader("Core Technical Proficiency Profile")
     
